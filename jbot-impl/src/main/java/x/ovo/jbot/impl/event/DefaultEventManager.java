@@ -80,12 +80,13 @@ public class DefaultEventManager implements EventManager {
                     log.error("[{}] 插件事件处理时出现异常：{}", plugin.getDescription().getName(), e.getMessage());
                     PluginExceptionEvent.of(plugin, e).publish();
                 }
-                log.debug("[{}] 插件事件处理结果：{}", plugin.getDescription().getName(), result);
 
                 // 检查是否需要执行下一个监听器
                 if (result && !listener.executeNext()) {
-                    log.debug("[{}] 插件事件处理完成，跳过后续处理器", plugin.getDescription().getName());
+                    log.debug("[{}] 插件事件处理完成：{}，跳过 后续插件监听器", plugin.getDescription().getName(), true);
                     break;
+                } else {
+                    log.debug("[{}] 插件事件处理完成：{}， 执行 后续插件监听器", plugin.getDescription().getName(), result);
                 }
             }
             promise.complete();
