@@ -1,0 +1,42 @@
+{
+  // 推送渠道，为空不推送，*为所有渠道都推送
+  "push_channels": [
+    "*"
+  ],
+  // 需要推送的事件类型[ContactEvent, SystemEvent, ExceptionEvent, LoginSystemEvent, LogoutSystemEvent, MessageEvent]
+  "push_event": [
+    "SystemEvent",
+    "ExceptionEvent"
+  ],
+  // 钉钉推送配置
+  "dingding": {
+    "token": ""
+  },
+  // 飞书推送配置
+  "feishu": {
+    "token": ""
+  },
+  // 企业微信推送配置
+  "wechatwork": {
+    "token": ""
+  },
+  // tgbot推送配置
+  "tgbot": {
+    "token": "",
+    "chat_id": ""
+  },
+  // pushplus推送
+  "pushplus": {
+    "token": ""
+  },
+  // serverchan推送
+  "serverchan": {
+    "token": ""
+  },
+  // webhook推送
+  "webhook": {
+    "url": ""
+  },
+  // 消息模板，推送时会注入变量信息，支持变量: type-事件类型，context-事件正文，timestamp-时间戳，datetime-日期时间信息
+  "template": "事件类型: {type}\n事件正文: {context}"
+}

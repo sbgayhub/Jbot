@@ -1,0 +1,8 @@
+{
+  "name": "push",
+  "main": "x.ovo.jbot.plugin.PushPlugin",
+  "version": "1.0.0",
+  "priority": -99,
+  "description": "推送插件",
+  "authors": ["ovo"]
+}

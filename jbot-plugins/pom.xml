@@ -25,6 +25,8 @@
         <module>jbot-plugin-reread</module>
         <module>jbot-plugin-tips</module>
         <module>jbot-plugin-card</module>
+        <module>jbot-plugin-ai</module>
+        <module>jbot-plugin-push</module>
     </modules>
 
     <dependencies>
